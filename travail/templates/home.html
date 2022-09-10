@@ -1,0 +1,51 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'travail/style.css' %}">
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Home</title>  
+</head>  
+<body> 
+  <div style="position: relative;">
+    
+    <div style="position: absolute; top: 0; right: 0;"><a  id="admin" href="http://127.0.0.1:8000/admin" style="text-decoration:none;">Admin</a></div>
+</div>
+    <form action="#" method="get">
+       <div id="right">
+         <fieldset>
+              <p>Are you looking for a job ?</p>
+              <a  id="sub" href="{%url 'compte' %}" style="text-decoration:none;">Click here</a>         </fieldset>
+       </div>
+       
+      
+       <div id="left">
+         <fieldset>
+              <p>Are you looking for an agent ?</p>
+              <a  id="recherche" href="{%url 'recherche' %}" style="text-decoration:none;">Click here</a>
+         </fieldset>
+
+       </div>
+	    
+    </form> 
+    <form>
+      <div id="right">
+        <fieldset>
+         <p>Contact us ?</p>
+         <a  id="look" href="{%url 'contact' %}" style="text-decoration:none;">Click here</a>
+        </fieldset>
+ 
+       </div>
+      
+    </form>
+    <div id="left">
+      <fieldset>
+           <p>Who we are?</p>
+           <a  id="who" href="{%url 'whoweare' %}" style="text-decoration:none;">Click here</a>
+      </fieldset>
+
+    </div>
+
+</body>  
+</html>

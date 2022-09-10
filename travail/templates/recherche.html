@@ -1,0 +1,64 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'travail/stylerecherche.css' %}">
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>FindAnAgent</title>
+	
+
+</head>
+<body>
+  <form method="POST" id="f">
+    {%csrf_token%}
+	
+    <div class="custom-select" >
+		
+		<select name="country" id="country" required>
+			<option>Country</option>
+      {% for i in country %}
+      <option> {{i.name}}</option>
+      {% endfor %}
+		</select>
+    <select  name="speciality" id="speciality" required> 
+		<option >Speciality</option>
+      {% for j in speciality %}
+                <option> {{j.name}}</option>
+      {% endfor %}
+      </select>
+     
+      
+		
+	</div>
+            
+	<table id="tableau-style">
+		<thead>
+      
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Phone Number</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+
+		
+      {% for k in worker %}
+			     <tr>
+				      <td>{{k.name}}</td>
+				      <td>{{k.lastname}}</td>
+				      <td>{{k.phone}}</td>
+				      <td>{{k.mail}}</td>
+			      </tr>
+			{%endfor%}
+        
+      <input type="submit" value="search"id="submit" >
+    
+		
+	</table>
+</form>
+</body>
+</html>

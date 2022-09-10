@@ -1,0 +1,39 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'travail/stylecompte.css' %}">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        CreateUrAccount
+    </title>
+</head>
+<body>
+<form action="/travail/compte" method="POST">
+    {%csrf_token%} 
+    <p><label> Cin:</label> <input type="text" name="cin" required>   </p>
+    <p> <label>First Name:</label> <input type="text" name="name" required>   </p>  
+    <p> <label>Last Name:</label> <input type="text"  name="lastname" required>   </p>
+    <p><label>Country:</label><select  name="country">
+        <option>Select Your Country</option>
+        {% for i in country %}
+             <option> {{i.name}}</option>
+        {% endfor %}   
+    </select></p>
+    <p><label>Your Phone Number:</label> <input type="tel"  name="phone" required></p> 
+    <p><label>Your E-mail:</label> <input type="email"  name="mail"></p>   
+    <p> <label>Speciality:</label>
+    <select  name="speciality" required> 
+    <option default>Select Your Speciality</option> 
+    {% for j in speciality %}
+              <option> {{j.name}}</option>
+    {% endfor %}
+    </select> </p> 
+    <p><input type="submit" value="Click here to register" id="submit"></p>   
+
+</form>
+<a href="#">
+    <img src="https://image.flaticon.com/icons/png/128/1251/1251704.png" alt="#">
+    </a>
+</body>
+</html>

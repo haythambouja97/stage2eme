@@ -1,0 +1,67 @@
+#left, #right { 
+  width: 40%; 
+  margin:10px; 
+  padding: 4em; 
+} 
+
+#left  { float:left;  }
+#right { float:right; }
+
+p{
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 35px;
+    margin-right: 50px;
+    font-style: italic;
+    
+}
+fieldset{
+    border-radius: 15px 30px;
+    border-color: cadetblue;
+    
+}
+
+body{
+  background-image:linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url("https://brochard-avocat.com/wp-content/uploads/2020/05/meeting-1019875_1920-1024x731-826x470.jpg");
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+#look,#who,#sub,#recherche{
+  display: inline-block;
+  background-color: #7b38d8;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position:relative;
+  margin-right: 140px;
+  margin-left: 150px;
+  font-style: italic;
+}
+#admin{
+  background-color: #7b38d8;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  font-style: italic;
+
+
+}
